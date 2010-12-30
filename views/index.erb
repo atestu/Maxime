@@ -1,0 +1,36 @@
+<div id="tags">
+	<div class="tag" id="gravures">
+		<div class="slideshow">
+		  <% for photo in @gravures %>
+    		<a href="/gravures"><img src="<%= FlickRaw.url_z(photo) %>" /></a>
+		  <% end %>
+		</div>
+		<div class="tag-name">
+			<a href="/gravures">Gravures</a>
+		</div>
+	</div>
+	<div class="tag" id="peintures">
+		<div class="slideshow">
+		  <% for photo in @peintures %>
+    		<a href="/peintures"><img src="<%= FlickRaw.url_z(photo) %>" /></a>
+		  <% end %>
+		</div>
+		<div class="tag-name">
+			<a href="/peintures">Peintures</a>
+		</div>
+	</div>
+	<div class="tag" id="sculptures">
+		<div class="slideshow">
+		  <% for photo in @sculptures %>
+    		<a href="/sculptures"><img src="<%= FlickRaw.url_z(photo) %>" /></a>
+		  <% end %>
+		</div>
+		<div class="tag-name">
+			<a href="/sculptures">Sculptures</a>
+		</div>
+	</div>
+</div>	
+	
+<div id="footer">
+	This website was made by Alexandre Testu.<br />
+</div>

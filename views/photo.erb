@@ -1,0 +1,11 @@
+<header>
+	<a href="/<%= "#{params[:tag]}"%>"><%= "#{params[:tag]}"%></a>
+</header>
+
+<img class="photo-big" src="<%= FlickRaw.url_z(@photo) %>" />
+<div id="title">
+	<h1><%= @photo.title %></h1>
+</div>
+<div id="description">
+	<%= @photo.description %>
+</div>

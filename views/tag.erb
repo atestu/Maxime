@@ -1,0 +1,7 @@
+<header>
+	<%= "#{params[:tag]}"%>
+</header>
+
+<% for photo in @list %>
+  <a href="<%= "/#{params[:tag]}/#{photo.id}" %>"><img class="photo" src="<%= FlickRaw.url_z(photo) %>" /></a>
+<% end %>
