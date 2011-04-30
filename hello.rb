@@ -4,7 +4,7 @@ require 'flickraw'
 
 FlickRaw.api_key = '5b2227672a4f87feea2e6d08baf007fb'
 FlickRaw.shared_secret = '3ca640f481a2bec9'
-user_id = '71266666@N00'
+user_id = '62399885@N08'
 
 # get '/auth' do
 #   frob = flickr.auth.getFrob
