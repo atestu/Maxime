@@ -70,6 +70,8 @@ img.photo-big {
 /* @group Index */
 
 #tags {
+	width: 600px;
+	margin: auto;
 	text-align: center;
 }
 

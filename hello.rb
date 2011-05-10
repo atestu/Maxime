@@ -35,5 +35,6 @@ get '/' do
   @gravures = flickr.photos.search :user_id => user_id, :tags => "gravures", :per_page => "3", :extras => "url_s"  
   @sculptures = flickr.photos.search :user_id => user_id, :tags => "sculptures", :per_page => "3", :extras => "url_s"  
   @peintures = flickr.photos.search :user_id => user_id, :tags => "peintures", :per_page => "3", :extras => "url_s"  
+  @dessins = flickr.photos.search :user_id => user_id, :tags => "dessins", :per_page => "3", :extras => "url_s"  
   erb :index
 end

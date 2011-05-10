@@ -29,6 +29,16 @@
 			<a href="/sculptures">Sculptures</a>
 		</div>
 	</div>
+	<div class="tag" id="dessins">
+		<div class="slideshow">
+		  <% for photo in @dessins %>
+    		<a href="/dessins"><img src="<%= FlickRaw.url_z(photo) %>" /></a>
+		  <% end %>
+		</div>
+		<div class="tag-name">
+			<a href="/dessins">Dessins</a>
+		</div>
+	</div>
 </div>	
 	
 <div id="footer">
