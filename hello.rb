@@ -6,20 +6,20 @@ FlickRaw.api_key = ENV['MAXIMEFLICKRAPIKEY']
 FlickRaw.shared_secret = ENV['MAXIMEFLICKRSECRET']
 user_id = '62399885@N08'
 
-get '/auth' do
-  frob = flickr.auth.getFrob
-  auth_url = FlickRaw.auth_url :frob => frob, :perms => 'read'
-
-  redirect auth_url
-
-  begin
-    auth = flickr.auth.getToken :frob => frob
-    login = flickr.test.login
-    puts "You are now authenticated as #{login.username} with token #{auth.token}"
-  rescue FlickRaw::FailedResponse => e
-    puts "Authentication failed : #{e.msg}"
-  end
-end
+# get '/auth' do
+#   frob = flickr.auth.getFrob
+#   auth_url = FlickRaw.auth_url :frob => frob, :perms => 'read'
+# 
+#   redirect auth_url
+# 
+#   begin
+#     auth = flickr.auth.getToken :frob => frob
+#     login = flickr.test.login
+#     puts "You are now authenticated as #{login.username} with token #{auth.token}"
+#   rescue FlickRaw::FailedResponse => e
+#     puts "Authentication failed : #{e.msg}"
+#   end
+# end
 
 get '/:tag' do
   @list = flickr.photos.search :user_id => user_id, :tags => "#{params[:tag]}"
